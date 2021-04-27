@@ -1,0 +1,28 @@
+{
+	"name": "vanilladex",
+	"version": "1.0.0",
+	"description": "Pokemon Pokedex duplicate made using JavaScript",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Gurinderp/VanillaDex.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Gurinderp/VanillaDex/issues"
+	},
+	"homepage": "https://github.com/Gurinderp/VanillaDex#readme",
+	"dependencies": {
+		"express": "^4.17.1",
+		"handlebars": "^4.7.7",
+		"mongoose": "^5.12.5"
+	},
+	"devDependencies": {
+		"dotenv": "^8.2.0",
+		"nodemon": "^2.0.7"
+	}
+}
