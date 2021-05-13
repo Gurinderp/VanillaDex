@@ -40,8 +40,13 @@ app.get("/pokedex", function (req, res) {
 });
 
 // GET request for pokemon list
-app.get("/pokedex/pokemon", function (req, res) {
-	res.send("hello pokemon");
+app.get("/pokedex/pokemon", async function (req, res) {
+	try {
+		const pokemonList = await Pokemon.find();
+		res.json(pokemonList);
+	} catch (err) {
+		res.send(Pokemon.find());
+	}
 });
 
 //
@@ -50,7 +55,7 @@ app.get("/pokedex/pokemon", function (req, res) {
 
 // POST request to register pokemon from front end
 app.post("/pokedex/register", async function (req, res) {
-	const pokemon = new Pokemon({
+	const poke = new Pokemon({
 		information: {
 			name: req.body.information.name,
 			dexNumber: req.body.information.dexNumber,
@@ -70,10 +75,10 @@ app.post("/pokedex/register", async function (req, res) {
 		},
 	});
 	try {
-		const newPokemon = await pokemon.save();
-		res.send("Pokemon Added");
+		const newPokemon = await poke.save();
+		res.send(newPokemon);
 	} catch (err) {
-		res.send(err);
+		res.send(req.body);
 		console.log(err);
 	}
 });
