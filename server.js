@@ -40,7 +40,7 @@ app.get("/pokedex", function (req, res) {
 });
 
 // GET request for pokemon list
-app.get("/pokedex/pokemon", async function (req, res) {
+app.get("/pokedex/pokemon/api", async function (req, res) {
 	try {
 		const pokemonList = await Pokemon.find();
 		res.json(pokemonList);
