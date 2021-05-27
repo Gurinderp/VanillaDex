@@ -54,18 +54,23 @@ app.get("/pokedex/pokemon/api", async function (req, res) {
 //
 
 // POST request to register pokemon from front end
-app.post("/pokedex/register", async function (req, res) {
+app.post("/pokedex/register/poke_submission", async function (req, res) {
 	const poke = new Pokemon({
 		information: {
+			// Is *.information.* necessary?
 			name: req.body.information.name,
 			dexNumber: req.body.information.dexNumber,
 			primaryType: req.body.information.primaryType,
+			// Not required
 			secondaryType: req.body.information.secondaryType,
 			description: req.body.information.description,
+			// Not required
 			devolvedForm: req.body.information.devolvedForm,
+			// Not required
 			evolvedForm: req.body.information.evolvedForm,
 		},
 		stats: {
+			// check *.stats.*
 			health: req.body.stats.health,
 			attack: req.body.stats.attack,
 			specialAttack: req.body.stats.specialAttack,

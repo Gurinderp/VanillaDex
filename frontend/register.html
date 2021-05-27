@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>
+			<form action="/poke_submission" method="POST">
+				<div>
+					<label for="name">Pokemon</label>
+					<input type="text" name="name" id="name" required />
+				</div>
+				<div>
+					<label for="number">Number</label>
+					<input type="text" name="number" id="number" required />
+				</div>
+				<div>
+					<label for="primaryType">Primary Type</label>
+					<input
+						type="text"
+						name="primaryType"
+						id="primaryType"
+						required
+					/>
+				</div>
+				<div>
+					<label for="secondayType">Secondary Type</label>
+					<input type="text" name="secondayType" id="secondayType" />
+				</div>
+				<div>
+					<label for="description">Description</label>
+					<input
+						type="text"
+						name="description"
+						id="description"
+						required
+					/>
+				</div>
+				<div>
+					<label for="devolvedForm">Evolves from</label>
+					<input type="text" name="devolvedForm" id="devolvedForm" />
+				</div>
+				<div>
+					<label for="evolvedForm">Evolves to</label>
+					<input type="text" name="evolvedForm" id="evolvedForm" />
+				</div>
+				<div>
+					<label for="health">Health</label>
+					<input type="text" name="health" id="health" required />
+				</div>
+				<div>
+					<label for="attack">Attack</label>
+					<input type="text" name="attack" id="attack" required />
+				</div>
+				<div>
+					<label for="specialAttack">SpecialAttack</label>
+					<input
+						type="text"
+						name="specialAttack"
+						id="specialAttack"
+						required
+					/>
+				</div>
+				<div>
+					<label for="defense">Defense</label>
+					<input type="text" name="defense" id="defense" required />
+				</div>
+				<div>
+					<label for="specialDefense">SpecialDefense</label>
+					<input
+						type="text"
+						name="specialDefense"
+						id="specialDefense"
+						required
+					/>
+				</div>
+				<div>
+					<label for="speed">Speed</label>
+					<input type="text" name="speed" id="speed" required />
+				</div>
+				<input type="submit" value="Submit" />
+			</form>
+		</div>
+	</body>
+</html>

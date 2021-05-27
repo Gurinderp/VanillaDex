@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"description": "Pokemon Pokedex duplicate made using JavaScript",
 	"main": "server.js",
+	"proxy": 5500,
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
