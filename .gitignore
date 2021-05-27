@@ -17,6 +17,10 @@ node_modules
 .DS_Store
 .env*
 
+# styling
+*.css.map
+*.css
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
