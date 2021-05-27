@@ -13,8 +13,8 @@ dotenv.config();
 const app = express();
 
 // telling express to handle json data
-app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // setting development environment variables
 const DB_URI = process.env.DB_URI;
@@ -57,26 +57,21 @@ app.get("/pokedex/pokemon/api", async function (req, res) {
 app.post("/pokedex/register/poke_submission", async function (req, res) {
 	const poke = new Pokemon({
 		information: {
-			// Is *.information.* necessary?
-			name: req.body.information.name,
-			dexNumber: req.body.information.dexNumber,
-			primaryType: req.body.information.primaryType,
-			// Not required
-			secondaryType: req.body.information.secondaryType,
-			description: req.body.information.description,
-			// Not required
-			devolvedForm: req.body.information.devolvedForm,
-			// Not required
-			evolvedForm: req.body.information.evolvedForm,
+			name: req.body.name,
+			dexNumber: req.body.dexNumber,
+			primaryType: req.body.primaryType,
+			secondaryType: req.body.secondaryType, // Not required
+			description: req.body.description,
+			devolvedForm: req.body.devolvedForm, // Not required
+			evolvedForm: req.body.evolvedForm, // Not required
 		},
 		stats: {
-			// check *.stats.*
-			health: req.body.stats.health,
-			attack: req.body.stats.attack,
-			specialAttack: req.body.stats.specialAttack,
-			defense: req.body.stats.defense,
-			specialDefense: req.body.stats.specialDefense,
-			speed: req.body.stats.speed,
+			health: req.body.health,
+			attack: req.body.attack,
+			specialAttack: req.body.specialAttack,
+			defense: req.body.defense,
+			specialDefense: req.body.specialDefense,
+			speed: req.body.speed,
 		},
 	});
 	try {
