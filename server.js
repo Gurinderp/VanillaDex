@@ -2,6 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const bodyParser = require("body-parser");
 
 // Models
 const Pokemon = require("./models/Pokemon");
@@ -13,7 +14,7 @@ dotenv.config();
 const app = express();
 
 // telling express to handle json data
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // setting development environment variables
@@ -82,7 +83,3 @@ app.post("/pokedex/register/poke_submission", async function (req, res) {
 		console.log(err);
 	}
 });
-
-//
-//
-//
