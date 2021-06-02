@@ -13,7 +13,7 @@ dotenv.config();
 // capturing express() in app variable
 const app = express();
 
-app.use("/", express.static(__dirname + "frontend"));
+app.get("/", express.static(__dirname + "../frontend"));
 
 // telling express to handle json data
 app.use(express.urlencoded({ extended: false }));
