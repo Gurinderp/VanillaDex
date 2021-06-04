@@ -2,6 +2,12 @@ body {
 	text-align: center;
 }
 
-#para {
-	color: green;
+a {
+	color: rgb(255, 0, 0);
+	font-size: 3vh;
+	padding: 2vw;
+	text-decoration: none;
+	:focus {
+		text-decoration: none;
+	}
 }
