@@ -2,7 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const bodyParser = require("body-parser");
+const ejs = require("ejs");
 
 // Models
 const Pokemon = require("./models/Pokemon");
@@ -13,11 +13,12 @@ dotenv.config();
 // capturing express() in app variable
 const app = express();
 
-app.get("/", express.static(__dirname + "../frontend/register.html"));
-
 // telling express to handle json data
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+// telling express to use the ejs engine
+app.set("view engine", "ejs");
 
 // setting development environment variables
 const DB_URI = process.env.DB_URI;
@@ -32,15 +33,24 @@ mongoose
 // Beginning app on specified port
 app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
 
-// GET request for home page
+// GET request for home page -- index.ejs
 app.get("/", function (req, res) {
-	res.send("Hello PokeWorld!");
+	res.render("index");
 });
 
 // GET request for pokedex page
 app.get("/pokedex", function (req, res) {
-	res.send("Hello Pokedex!");
+	res.render("pokedex");
 });
+
+// GET request for moves page
+app.get("/moves", function (req, res) {
+	res.render("moves");
+});
+
+//
+// Old code -- needs refactoring for ejs
+//
 
 // GET request for pokemon list
 app.get("/pokedex/pokemon/api", async function (req, res) {
@@ -53,7 +63,7 @@ app.get("/pokedex/pokemon/api", async function (req, res) {
 });
 
 //
-// Need GET request to search in Pokedex
+// Still works with register.html as back up
 //
 
 // POST request to register pokemon from front end
