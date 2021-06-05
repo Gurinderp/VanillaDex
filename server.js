@@ -41,13 +41,15 @@ app.get("/", function (req, res) {
 });
 
 // GET request for pokedex page
+//
+// console.log(pokemon); -- extra for 'else'
+//
 app.get("/pokedex", function (req, res) {
 	Pokemon.find(function (err, pokemon) {
 		if (err) {
 			console.log(err);
 		} else {
 			res.render("pokedex", { pokemon: pokemon });
-			console.log(pokemon);
 		}
 	});
 });
