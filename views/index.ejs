@@ -3,11 +3,29 @@
 	<head>
 		<%- include('./partials/head'); %>
 	</head>
-	<body>
+	<body class="homepage-container page">
 		<%- include('./partials/nav') %>
 		<div><p>Hello World!</p></div>
 		<div>
 			<p>index.ejs</p>
+		</div>
+		<div>
+			<div class="homepage-selection">
+				<img
+					src="../public/assets/placeholderimage.png"
+					alt="placeholderimage"
+					class="homepage-image"
+				/>
+				<a href="/pokedex">Pokedex</a>
+			</div>
+			<div class="homepage-selection">
+				<img
+					src="../public/assets/placeholderimage.png"
+					alt="placeholderimage"
+					class="homepage-image"
+				/>
+				<a href="/moves">Moves</a>
+			</div>
 		</div>
 	</body>
 </html>
