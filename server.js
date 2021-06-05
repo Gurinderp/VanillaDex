@@ -18,6 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use("/css", express.static(__dirname + "/public/styles"));
+app.use(express.static("public"));
 
 // telling express to use the ejs engine
 app.set("view engine", "ejs");
