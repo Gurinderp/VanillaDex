@@ -25,33 +25,31 @@
 				<% } %>
 		</div>
 		<script>
+			// Store pokemon-dex-number in num variable
 			let num = document.getElementsByClassName("pokemon-dex-number")
+
+			
+			// Ensures Pokemon Dex Number will be 3 digits long
 			function threeDigits() {
-				console.log(num[0].innerHTML)
-				console.log(num.length)
-				console.log(typeof num[0].innerHTML)
-
+				
+				// Loop for numbers below 10
 				for (var i = 0; i < 9; i++){
-
+					// Parse the content of num into Number
 					let numParsed = parseFloat(num[i].innerHTML);
+					// Set content of Num to corrected value
+					num[i].innerHTML = '00' + numParsed
+				}
 
-					console.log(numParsed)
-					console.log(typeof numParsed)
-
-						num[i].innerHTML = '00' + numParsed
-					}
-					
-
+				// Loop for numbers above 9 and less than 99
 				for (var i = 9; i < 99; i++){
-
+					// Parse the content of num into Number
 					let numParsed = parseFloat(num[i].innerHTML);
-
-					console.log(numParsed)
-					console.log(typeof numParsed)
-
+					// Set content of Num to corrected value
 					num[i].innerHTML = '0' + numParsed
 				}
 			}
+
+			// Invoke function to make corrections
 			threeDigits();
 		</script>
 	</body>
