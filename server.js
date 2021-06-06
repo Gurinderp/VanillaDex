@@ -7,26 +7,29 @@ const ejs = require("ejs");
 // Models
 const Pokemon = require("./models/Pokemon");
 
-// dotenv configuration method
+// Dotenv configuration method
 dotenv.config();
 
-// capturing express() in app variable
+// Capturing express() in app variable
 const app = express();
 
-// telling express to handle json data
+// Telling express to handle json data
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+// Set paths for use
+app.use(express.static("public"));
 app.use("/css", express.static(__dirname + "/public/styles"));
+app.use("/images", express.static(__dirname + "/public/assets"));
 
-// telling express to use the ejs engine
+// Telling express to use the ejs engine
 app.set("view engine", "ejs");
 
-// setting development environment variables
+// Setting development environment variables
 const DB_URI = process.env.DB_URI;
 const PORT = process.env.PORT || 3000;
 
-// mongoose connecting to MongoDB database
+// Mongoose connecting to MongoDB database
 mongoose
 	.connect(DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 	.then((result) => console.log("Connected to Database"))
@@ -42,7 +45,8 @@ app.get("/", function (req, res) {
 
 // GET request for pokedex page
 //
-// console.log(pokemon); -- extra for 'else'
+// Console.log(pokemon); -- extra for 'else'
+// to check outputs by code
 //
 app.get("/pokedex", function (req, res) {
 	Pokemon.find(function (err, pokemon) {

@@ -5,17 +5,17 @@
 	</head>
 	<body>
 		<%- include('./partials/nav') %>
-		<div><p>Hello World!</p></div>
-		<div>
-			<p>pokedex.ejs</p>
-		</div>
 		<div class="pokedex-card-container">
-
 			<% for(var i=0; i<pokemon.length;i++) { %>
 				<div class="dex-pokemon-card card">
-					<div class="pokemon-card-id">
-						<p><%= pokemon[i].information.name %></p>
-						<p><%= pokemon[i].information.dexNumber %></p>
+					<div class="pokemon-card-pokemon">
+						<div class="pokemon-card-id">
+							<p class="pokemon-name"><%= pokemon[i].information.name %></p>
+							<p><%= pokemon[i].information.dexNumber %></p>
+						</div>
+						<div class="pokemon-card-image">
+							<img class="poke-image" src="/images/placeholderimage.png" alt="poke-image">
+						</div>
 					</div>
 					<div class="pokemon-card-description">
 						<p><%= pokemon[i].information.primaryType %></p>
@@ -23,6 +23,22 @@
 					</div>
 				</div>
 				<% } %>
-			</div>
+		</div>
+		<script>
+			// Grabs elements
+			pokemonImage = document.getElementsByClassName("poke-image");
+			pokemonName = document.getElementsByClassName("pokemon-name")
+			
+			// Checking attributes of each element
+			console.log(pokemonImage)
+			console.log(pokemonImage[0].src)
+			console.log(pokemonName[0])
+
+			// Automatically assign image according to pokemon name
+			// Needs work
+			for (var i = 0; i < pokemonImage.length; i++) {
+				pokemonImage[i] = "/images/" + pokemonName[i] + ".png"
+			}
+		</script>
 	</body>
 </html>

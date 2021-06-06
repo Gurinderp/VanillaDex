@@ -15,7 +15,8 @@ a {
 .dex-pokemon-card {
 	border: 2px solid black;
 	display: flex;
-	padding: 1vh;
+	// top right bottom left
+	padding: 1vh 1vh 1vh 1vh;
 	margin: 2vh;
 	max-width: 25vw;
 	min-height: 20vh;
@@ -35,7 +36,18 @@ a {
 }
 
 .pokedex-card-container {
+	margin-top: 5vh;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
+}
+
+.pokemon-card-pokemon {
+	display: inline;
+	width: 100%;
+}
+
+.poke-image {
+	width: 20vh;
+	height: 20vh;
 }
