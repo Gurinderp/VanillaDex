@@ -14,7 +14,7 @@
 							<p><%= pokemon[i].information.dexNumber %></p>
 						</div>
 						<div class="pokemon-card-image">
-							<img class="poke-image" src="/images/placeholderimage.png" alt="poke-image">
+							<img class="poke-image" src="/images/<%= pokemon[i].information.name %>.png" alt="poke-image">
 						</div>
 					</div>
 					<div class="pokemon-card-description">
@@ -26,8 +26,8 @@
 		</div>
 		<script>
 			// Grabs elements
-			pokemonImage = document.getElementsByClassName("poke-image");
-			pokemonName = document.getElementsByClassName("pokemon-name")
+			let pokemonImage = document.getElementsByClassName("poke-image");
+			let pokemonName = document.getElementsByClassName("pokemon-name")
 			
 			// Checking attributes of each element
 			console.log(pokemonImage)
@@ -35,9 +35,12 @@
 			console.log(pokemonName[0])
 
 			// Automatically assign image according to pokemon name
+			//
 			// Needs work
+			//
 			for (var i = 0; i < pokemonImage.length; i++) {
-				pokemonImage[i] = "/images/" + pokemonName[i] + ".png"
+				let image = pokemonImage[i].style.backgroundImage = "/images/" + pokemonName[i] + ".png"
+				console.log(image)
 			}
 		</script>
 	</body>
