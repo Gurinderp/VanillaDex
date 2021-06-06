@@ -24,24 +24,5 @@
 				</div>
 				<% } %>
 		</div>
-		<script>
-			// Grabs elements
-			let pokemonImage = document.getElementsByClassName("poke-image");
-			let pokemonName = document.getElementsByClassName("pokemon-name")
-			
-			// Checking attributes of each element
-			console.log(pokemonImage)
-			console.log(pokemonImage[0].src)
-			console.log(pokemonName[0])
-
-			// Automatically assign image according to pokemon name
-			//
-			// Needs work
-			//
-			for (var i = 0; i < pokemonImage.length; i++) {
-				let image = pokemonImage[i].style.backgroundImage = "/images/" + pokemonName[i] + ".png"
-				console.log(image)
-			}
-		</script>
 	</body>
 </html>
