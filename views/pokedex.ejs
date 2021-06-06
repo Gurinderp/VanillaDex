@@ -11,7 +11,7 @@
 					<div class="pokemon-card-pokemon">
 						<div class="pokemon-card-id">
 							<p class="pokemon-name"><%= pokemon[i].information.name %></p>
-							<p><%= pokemon[i].information.dexNumber %></p>
+							<p class="pokemon-dex-number"><%= pokemon[i].information.dexNumber %></p>
 						</div>
 						<div class="pokemon-card-image">
 							<img class="poke-image" src="/images/<%= pokemon[i].information.name %>.png" alt="poke-image">
@@ -24,5 +24,35 @@
 				</div>
 				<% } %>
 		</div>
+		<script>
+			let num = document.getElementsByClassName("pokemon-dex-number")
+			function threeDigits() {
+				console.log(num[0].innerHTML)
+				console.log(num.length)
+				console.log(typeof num[0].innerHTML)
+
+				for (var i = 0; i < 9; i++){
+
+					let numParsed = parseFloat(num[i].innerHTML);
+
+					console.log(numParsed)
+					console.log(typeof numParsed)
+
+						num[i].innerHTML = '00' + numParsed
+					}
+					
+
+				for (var i = 9; i < 99; i++){
+
+					let numParsed = parseFloat(num[i].innerHTML);
+
+					console.log(numParsed)
+					console.log(typeof numParsed)
+
+					num[i].innerHTML = '0' + numParsed
+				}
+			}
+			threeDigits();
+		</script>
 	</body>
 </html>
