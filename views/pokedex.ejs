@@ -9,16 +9,20 @@
 		<div>
 			<p>pokedex.ejs</p>
 		</div>
-		<div class="dex-pokemon-card card">
+		<div class="pokedex-card-container">
+
 			<% for(var i=0; i<pokemon.length;i++) { %>
-				<ol class="card-info">
-					<li><%= i %></li>
-					<li><%= pokemon[i].information.name %></li>
-					<li><%= pokemon[i].information.dexNumber %></li>
-					<li><%= pokemon[i].information.primaryType %></li>
-					<li><%= pokemon[i].information.description %></li>
-				</ol>
+				<div class="dex-pokemon-card card">
+					<div class="pokemon-card-id">
+						<p><%= pokemon[i].information.name %></p>
+						<p><%= pokemon[i].information.dexNumber %></p>
+					</div>
+					<div class="pokemon-card-description">
+						<p><%= pokemon[i].information.primaryType %></p>
+						<p><%= pokemon[i].information.description %></p>
+					</div>
+				</div>
 				<% } %>
-		</div>
+			</div>
 	</body>
 </html>

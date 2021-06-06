@@ -13,14 +13,29 @@ a {
 }
 
 .dex-pokemon-card {
-	color: white;
-	background-color: black;
-	padding: 2vh;
+	border: 2px solid black;
+	display: flex;
+	padding: 1vh;
+	margin: 2vh;
+	max-width: 25vw;
+	min-height: 20vh;
+	width: auto;
+	height: auto;
+	:first-child {
+		padding-right: 2%;
+	}
 }
 
-.card-info {
-	border: 8px solid green;
-	width: 40%;
-	margin-left: auto;
-	margin-right: auto;
+.pokemon-card-id {
+	display: flex;
+	p {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
+
+.pokedex-card-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
