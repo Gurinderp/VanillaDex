@@ -27,6 +27,29 @@ a {
 	}
 }
 
+.homepage-paths {
+	display: flex;
+	justify-content: space-evenly;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30vh;
+	width: 50%;
+}
+
+.homepage-selection {
+	height: 25vh;
+	width: 20vw;
+	border: 2px solid black;
+	a {
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+		padding: 5.5vw 7.5vw 5.5vw 7.5vw;
+		margin: -2em;
+		transform: translate(0%, 20%);
+	}
+}
+
 .pokemon-card-id {
 	display: flex;
 	p {
