@@ -16,12 +16,12 @@ a {
 	border: 2px solid black;
 	display: flex;
 	// top right bottom left
-	padding: 1vh 1vh 1vh 1vh;
+	height: auto;
 	margin: 2vh;
 	max-width: 20vw;
 	min-height: 20vh;
+	padding: 1vh 1vh 1vh 1vh;
 	width: auto;
-	height: auto;
 	:first-child {
 		padding-right: 2%;
 	}
@@ -36,27 +36,27 @@ a {
 }
 
 .homepage-selection {
+	border: 2px solid black;
 	height: 25vh;
 	width: 20vw;
-	border: 2px solid black;
 	a {
 		display: inline-block;
-		position: relative;
-		z-index: 1;
-		padding: 5.5vw 7.5vw 5.5vw 7.5vw;
 		margin: -2em;
+		position: relative;
+		padding: 5.5vw 7.5vw 5.5vw 7.5vw;
 		transform: translate(0%, 20%);
+		z-index: 1;
 	}
 }
 
 .navbar-container {
+	background-color: red;
+	bottom: 0;
 	display: flex;
 	flex-direction: column;
-	background-color: red;
-	width: 20%;
-	top: 0;
-	bottom: 0;
 	position: fixed;
+	top: 0;
+	width: 20%;
 	a {
 		color: white;
 	}
@@ -75,11 +75,11 @@ a {
 }
 
 .pokedex-card-container {
-	margin-top: 5vh;
-	margin-left: 20%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
+	margin-left: 20%;
+	margin-top: 5vh;
 }
 
 .pokemon-card-pokemon {
@@ -88,13 +88,13 @@ a {
 }
 
 .poke-image {
-	width: 20vh;
 	height: 20vh;
+	width: 20vh;
 }
 
 .title {
-	margin-left: 20%;
-	width: 80%;
 	font-size: 6.5em;
+	margin-left: 20%;
 	margin-top: 5vh;
+	width: 80%;
 }
