@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!--Including Head partial-->
 		<%- include('./partials/head'); %>
 	</head>
 	<body class="homepage-container page">
+		<!--Including Navigation partial-->
 		<%- include('./partials/nav') %>
+		<!--Homepage Title-->
 		<div class="homepage-title title">Vanilla Dex</div>
 		<div class="homepage-paths">
 			<div class="homepage-selection">
+				<!--Homepage link that routes to /pokedex and opens the Pokedex-->
 				<a href="/pokedex">Pokedex</a>
 			</div>
 			<div class="homepage-selection">
+				<!--Homepage link that routes to /moves and opens the Moves List-->
 				<a href="/moves">Moves</a>
 			</div>
 		</div>

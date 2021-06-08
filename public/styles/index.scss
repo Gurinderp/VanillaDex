@@ -13,8 +13,10 @@ a {
 }
 
 .dex-pokemon-card {
-	border: 2px solid black;
-	display: flex;
+	background-color: red;
+	color: white;
+	border: 1px solid rgb(148, 0, 0);
+	box-shadow: rgb(148, 0, 0) 0px 0px 5px 1px;
 	// top right bottom left
 	height: auto;
 	margin: 2vh;
@@ -52,14 +54,52 @@ a {
 .navbar-container {
 	background-color: red;
 	bottom: 0;
-	display: flex;
-	flex-direction: column;
 	position: fixed;
 	top: 0;
 	width: 20%;
+}
+
+.navbar-links {
+	display: flex;
+	flex-direction: column;
 	a {
 		color: white;
 	}
+}
+
+.navbar-username-display {
+	display: flex;
+	color: white;
+	background-color: black;
+	border: 20px solid white;
+	width: 75%;
+	height: 25vh;
+	margin: auto;
+	margin-top: 10%;
+	:before {
+		content: "";
+		position: absolute;
+		top: 29.3%;
+		left: 5.5%;
+		border-bottom: 40px solid red;
+		border-right: 40px solid white;
+		width: 0;
+	}
+	:after {
+		content: "";
+		position: absolute;
+		top: 26.4%;
+		left: 12.5%;
+		border-bottom: 40px solid white;
+		border-right: 40px solid black;
+		width: 0;
+	}
+}
+
+.navbar-username {
+	margin: auto;
+	font-size: 1.8rem;
+	padding: 1vw;
 }
 
 .page {
@@ -68,10 +108,28 @@ a {
 
 .pokemon-card-id {
 	display: flex;
-	p {
-		padding-left: 1rem;
-		padding-right: 1rem;
+}
+.pokemon-card-image {
+	background-color: black;
+	border: 20px solid white;
+	width: 60%;
+	margin: auto;
+	:after {
+		content: "";
+		position: absolute;
+		top: 26.4%;
+		left: 12.5%;
+		border-bottom: 40px solid white;
+		border-right: 40px solid black;
+		width: 0;
 	}
+}
+
+.pokemon-card-type {
+	display: flex;
+	width: 40%;
+	margin: auto;
+	justify-content: space-around;
 }
 
 .pokedex-card-container {
@@ -85,6 +143,11 @@ a {
 .pokemon-card-pokemon {
 	display: inline;
 	width: 100%;
+	p {
+		font-size: 1.5em;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .poke-image {

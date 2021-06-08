@@ -1,37 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!--Including Head partial-->
 		<%- include('./partials/head'); %>
 	</head>
 	<body class="pokedex-container page">
+		<!--Including Navigation partial-->
 		<%- include('./partials/nav') %>
+		<!--Pokedex Title-->
 		<div class="pokedex-title title">Pokemon Pokedex</div>
 		<div class="pokedex-card-container">
+			<!--Loop to render data sent by express to populate Pokedex page-->
 			<% for(var i=0; i<pokemon.length;i++) { %>
 				<div class="dex-pokemon-card card">
 					<div class="pokemon-card-pokemon">
 						<div class="pokemon-card-id">
+							<!--targets Pokemon Name-->
 							<p class="pokemon-name"><%= pokemon[i].information.name %></p>
+							<!--targets Pokemon Dex Number-->
 							<p class="pokemon-dex-number"><%= pokemon[i].information.dexNumber %></p>
 						</div>
 						<div class="pokemon-card-image">
+							<!--Dynamically adds respective image to each pokemon from the assets folder-->
 							<img class="poke-image" src="/images/<%= pokemon[i].information.name %>.png" alt="poke-image">
 						</div>
 					</div>
 					<div class="pokemon-card-description">
-						<p><%= pokemon[i].information.primaryType %></p>
+						<!--targets Pokemon Primary Type-->
+						<div class="pokemon-card-type">
+							<p><%= pokemon[i].information.primaryType %></p>
+							<!--targets Pokemon Secondary Type-->
+							<!--Adds Secondary Type if it is not null-->
+							<% if(pokemon[i].information.secondaryType) { %>
+								<p><%= pokemon[i].information.secondaryType %></p>
+								<% } %>
+						</div>
+								<!--targets Pokemon Description-->
 						<p><%= pokemon[i].information.description %></p>
 					</div>
 				</div>
 				<% } %>
 		</div>
 		<script>
-			// Store pokemon-dex-number in num variable
-			let num = document.getElementsByClassName("pokemon-dex-number")
-
+			
 			
 			// Ensures Pokemon Dex Number will be 3 digits long
 			function threeDigits() {
+				// Store pokemon-dex-number in num variable
+				let num = document.getElementsByClassName("pokemon-dex-number")
 				
 				// Loop for numbers below 10
 				for (var i = 0; i < 9; i++){
