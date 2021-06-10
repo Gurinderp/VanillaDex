@@ -30,14 +30,17 @@ const DB_URI = process.env.DB_URI;
 const PORT = process.env.PORT || 3000;
 
 // Mongoose connecting to MongoDB database
-mongoose.connect(DB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
-mongoose.connection
-	.once("open", function () {
-		console.log("Connected to DB");
-	})
-	.on("error", function (error) {
-		console.log("Error is: ", error);
-	});
+mongoose.connect(
+	DB_URI,
+	{ useNewUrlParser: true, useUnifiedTopology: true },
+	async function (req, res) {
+		try {
+			await console.log("Connected to Database");
+		} catch (err) {
+			throw err;
+		}
+	}
+);
 
 // Beginning app on specified port
 app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
