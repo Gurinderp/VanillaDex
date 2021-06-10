@@ -88,7 +88,7 @@ a {
 	:after {
 		content: "";
 		position: absolute;
-		top: 26.4%;
+		top: 26.5%;
 		left: 12.5%;
 		border-bottom: 40px solid white;
 		border-right: 40px solid black;
@@ -114,15 +114,6 @@ a {
 	border: 20px solid white;
 	width: 60%;
 	margin: auto;
-	:after {
-		content: "";
-		position: absolute;
-		top: 26.4%;
-		left: 12.5%;
-		border-bottom: 40px solid white;
-		border-right: 40px solid black;
-		width: 0;
-	}
 }
 
 .pokemon-card-type {
@@ -130,6 +121,9 @@ a {
 	width: 40%;
 	margin: auto;
 	justify-content: space-around;
+}
+.primary {
+	color: blue;
 }
 
 .pokedex-card-container {

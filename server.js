@@ -44,10 +44,6 @@ app.get("/", function (req, res) {
 });
 
 // GET request for pokedex page
-//
-// Console.log(pokemon); -- extra for 'else'
-// to check outputs by code
-//
 app.get("/pokedex", function (req, res) {
 	Pokemon.find(function (err, pokemon) {
 		if (err) {
