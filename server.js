@@ -61,6 +61,17 @@ app.get("/pokedex", function (req, res) {
 	});
 });
 
+// GET request for pokedex page
+app.get("/pokedex/api", function (req, res) {
+	Pokemon.find(function (err, pokemon) {
+		if (err) {
+			console.log(err);
+		} else {
+			res.send({ pokemon: pokemon });
+		}
+	});
+});
+
 // GET request for moves page
 app.get("/moves", function (req, res) {
 	res.render("moves");
