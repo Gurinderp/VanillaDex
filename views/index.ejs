@@ -26,13 +26,19 @@
 					return response.json();
 				})
 				.then((data) => {
-					console.log(data);
+					consoleLogData(data);
 				})
 				.catch((err) => {
 					console.log(err);
 				});
 
 			console.log("hello world");
+
+			function consoleLogData(data) {
+				for (var i = 0; i < data.length; i++) {
+					console.log(data[i]);
+				}
+			}
 		</script>
 	</body>
 </html>
