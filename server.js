@@ -52,8 +52,35 @@ app.get("/", function (req, res) {
 
 // GET request for pokedex page
 app.get("/pokedex", function (req, res) {
+	Pokemon.find(function (err, pokemon) {
+		if (err) {
+			console.log(err);
+		} else {
+			console.log(pokemon);
+			res.render("pokedex", { pokemon: pokemon });
+		}
+	});
+});
+
+// GET request for pokedex page -- Filter for Primary Type
+app.get("/pokedex/primary/:id", function (req, res) {
 	Pokemon.find(
-		{ "information.primaryType": "Grass" },
+		{ "information.primaryType": req.params.id },
+		function (err, pokemon) {
+			if (err) {
+				console.log(err);
+			} else {
+				console.log(pokemon);
+				res.render("pokedex", { pokemon: pokemon });
+			}
+		}
+	);
+});
+
+// GET request for pokedex page -- Filter for Dex Number
+app.get("/pokedex/:id", function (req, res) {
+	Pokemon.find(
+		{ "information.dexNumber": req.params.id },
 		function (err, pokemon) {
 			if (err) {
 				console.log(err);
