@@ -52,13 +52,17 @@ app.get("/", function (req, res) {
 
 // GET request for pokedex page
 app.get("/pokedex", function (req, res) {
-	Pokemon.find(function (err, pokemon) {
-		if (err) {
-			console.log(err);
-		} else {
-			res.render("pokedex", { pokemon: pokemon });
+	Pokemon.find(
+		{ "information.primaryType": "Grass" },
+		function (err, pokemon) {
+			if (err) {
+				console.log(err);
+			} else {
+				console.log(pokemon);
+				res.render("pokedex", { pokemon: pokemon });
+			}
 		}
-	});
+	);
 });
 
 // GET request for pokedex page
@@ -75,6 +79,16 @@ app.get("/pokedex/api", function (req, res) {
 // GET request for moves page
 app.get("/moves", function (req, res) {
 	res.render("moves");
+});
+
+// GET request for register page
+app.get("/registration", function (req, res) {
+	res.render("registration");
+});
+
+// GET request for login page
+app.get("/login", function (req, res) {
+	res.render("login");
 });
 
 //
