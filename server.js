@@ -56,7 +56,6 @@ app.get("/pokedex", function (req, res) {
 		if (err) {
 			console.log(err);
 		} else {
-			console.log(pokemon);
 			res.render("pokedex", { pokemon: pokemon });
 		}
 	});
@@ -86,7 +85,7 @@ app.get("/pokedex/:id", function (req, res) {
 				console.log(err);
 			} else {
 				console.log(pokemon);
-				res.render("pokedex", { pokemon: pokemon });
+				res.render("pokemonView", { pokemon: pokemon });
 			}
 		}
 	);

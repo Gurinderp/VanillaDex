@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!--Including Head partial-->
+		<%- include('./partials/head'); %>
+	</head>
+	<body class="pokeView-container page">
+		<!--Including Navigation partial-->
+		<%- include('./partials/nav') %>
+		<!--PokemonView Page Title-->
+		<div class="pokeView-title title">
+			<%= pokemon[0].information.name %>
+		</div>
+		<div class=""><%= pokemon[0].information.dexNumber %></div>
+		<div class="">
+			<%= pokemon[0].information.primaryType %> 
+			<% if(pokemon[0].information.secondaryType) { %>
+				<p><%= pokemon[0].information.secondaryType %></p>
+			<% } %>
+		</div>
+		<div class=""><%= pokemon[0].information.description %></div>
+		<div class="">
+			<% if(pokemon[0].information.devolvedForm) { %>
+				<p><%= pokemon[0].information.devolvedForm %></p>
+			<% } %></div> 
+
+			<% if(pokemon[0].information.evolvedForm) { %>
+				<p><%= pokemon[0].information.evolvedForm %></p>
+			<% } %>
+		</div>
+		<div class="">
+			<div>
+				Stats
+			</div>
+			<div><%= pokemon[0].stats.health %></div>
+			<div><%= pokemon[0].stats.attack %></div>
+			<div><%= pokemon[0].stats.defense %></div>
+			<div><%= pokemon[0].stats.specialAttack %></div>
+			<div><%= pokemon[0].stats.specialDefense %></div>
+			<div><%= pokemon[0].stats.speed %></div>
+		</div>
+	</body>
+</html>
