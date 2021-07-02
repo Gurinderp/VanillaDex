@@ -52,11 +52,11 @@ app.get("/", function (req, res) {
 
 // GET request for pokedex page
 app.get("/pokedex", function (req, res) {
-	Pokemon.find(function (err, pokemon) {
-		if (err) {
-			console.log(err);
-		} else {
-			res.render("pokedex", { pokemon: pokemon });
+	Pokemon.find(async function (err, pokemon) {
+		try {
+			await res.render("pokedex", { pokemon: pokemon });
+		} catch (err) {
+			throw err;
 		}
 	});
 });
