@@ -3,6 +3,9 @@
 	"version": "1.0.0",
 	"description": "Pokemon Pokedex duplicate made using JavaScript",
 	"main": "server.js",
+	"engines": {
+		"node": "12.13.1"
+	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
