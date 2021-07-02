@@ -1,0 +1,189 @@
+body {
+  text-align: center;
+}
+
+a {
+  color: red;
+  font-size: 3vh;
+  padding: 2vw;
+  text-decoration: none;
+}
+
+a :focus {
+  text-decoration: none;
+}
+
+.dex-pokemon-card {
+  background-color: red;
+  color: white;
+  border: 1px solid #940000;
+  -webkit-box-shadow: #940000 0px 0px 5px 1px;
+          box-shadow: #940000 0px 0px 5px 1px;
+  height: auto;
+  margin: 2vh;
+  max-width: 20vw;
+  min-height: 20vh;
+  padding: 1vh 1vh 1vh 1vh;
+  width: auto;
+}
+
+.dex-pokemon-card :first-child {
+  padding-right: 2%;
+}
+
+.homepage-paths {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-left: 20%;
+  margin-top: 15vh;
+  width: 80%;
+}
+
+.homepage-selection {
+  border: 2px solid black;
+  height: 25vh;
+  width: 20vw;
+}
+
+.homepage-selection a {
+  display: inline-block;
+  margin: -2em;
+  position: relative;
+  padding: 5.5vw 7.5vw 5.5vw 7.5vw;
+  -webkit-transform: translate(0%, 20%);
+          transform: translate(0%, 20%);
+  z-index: 1;
+}
+
+.navbar-container {
+  background-color: red;
+  bottom: 0;
+  position: fixed;
+  top: 0;
+  width: 20%;
+}
+
+.navbar-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.navbar-links a {
+  color: white;
+}
+
+.navbar-username-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  background-color: black;
+  border: 20px solid white;
+  width: 75%;
+  height: 25vh;
+  margin: auto;
+  margin-top: 10%;
+}
+
+.navbar-username-display :before {
+  content: "";
+  position: absolute;
+  top: 29.3%;
+  left: 5.5%;
+  border-bottom: 40px solid red;
+  border-right: 40px solid white;
+  width: 0;
+}
+
+.navbar-username-display :after {
+  content: "";
+  position: absolute;
+  top: 26.5%;
+  left: 12.5%;
+  border-bottom: 40px solid white;
+  border-right: 40px solid black;
+  width: 0;
+}
+
+.navbar-username {
+  margin: auto;
+  font-size: 1.8rem;
+  padding: 1vw;
+}
+
+.page {
+  margin: 0;
+}
+
+.pokemon-card-id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pokemon-card-image {
+  background-color: black;
+  border: 20px solid white;
+  width: 60%;
+  margin: auto;
+}
+
+.pokemon-card-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  margin: auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.primary {
+  color: blue;
+}
+
+.pokedex-card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-left: 20%;
+  margin-top: 5vh;
+}
+
+.pokemon-card-pokemon {
+  display: inline;
+  width: 100%;
+}
+
+.pokemon-card-pokemon p {
+  font-size: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.poke-image {
+  height: 20vh;
+  width: 20vh;
+}
+
+.title {
+  font-size: 6.5em;
+  margin-left: 20%;
+  margin-top: 5vh;
+  width: 80%;
+}
+/*# sourceMappingURL=index.css.map */

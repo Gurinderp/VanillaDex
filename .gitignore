@@ -17,7 +17,6 @@ node_modules
 .env*
 
 # styling
-*.css
 *.css.map
 
 npm-debug.log*
