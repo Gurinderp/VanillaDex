@@ -87,10 +87,11 @@ a :focus {
 }
 
 .navbar-container {
-  background-color: #077981;
-  bottom: 0;
+  background-color: #077981c2;
+  bottom: 10%;
+  left: 1%;
   position: fixed;
-  top: 0;
+  top: 15%;
   width: 20%;
 }
 
@@ -198,5 +199,61 @@ a :focus {
   margin-left: 20%;
   margin-top: 5vh;
   width: 80%;
+}
+
+.trainer-card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #077981;
+  border-radius: 0px 70px 0px 0px;
+  bottom: 89%;
+  left: 1%;
+  position: fixed;
+  top: 2%;
+  width: 25%;
+}
+
+.trainer-card-container img {
+  background-color: #d3d3d3;
+  border: 7px solid #021314;
+  border-radius: 0px 0px 30px 5px;
+  height: 63px;
+  padding: 1vh;
+  width: 63px;
+}
+
+.trainer-username-display {
+  border-radius: 0px 25px 0px 0px;
+  color: #bababa;
+  max-height: 3.8vh;
+  width: 14vw;
+  text-align: left;
+  overflow: hidden;
+}
+
+.trainer-username-display p {
+  font-size: large;
+  margin: 4% 1% 4% 4%;
+}
+
+.trainer-favorite-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 14vw;
+}
+
+.trainer-favorite-display img {
+  background-color: #021314;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1vh;
+  padding: 2px;
+  height: 21px;
+  width: 21px;
 }
 /*# sourceMappingURL=index.css.map */
