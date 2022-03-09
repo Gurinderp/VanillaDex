@@ -6,7 +6,7 @@ body {
 a {
 	color: rgb(0, 255, 17);
 	font-size: 3vh;
-	padding: 2vw;
+	padding: 3vh;
 	text-decoration: none;
 	:focus {
 		text-decoration: none;
@@ -72,43 +72,26 @@ a {
 }
 
 .navbar-container {
-	background-color: #077981c2;
-	bottom: 10%;
+	bottom: 6%;
 	left: 1%;
 	position: fixed;
-	top: 15%;
+	top: 18%;
 	width: 20%;
 }
-
 
 .navbar-links {
 	display: flex;
 	flex-direction: column;
 	margin: auto;
-	width: 92%;
+	width: 100%;
 	a {
 		background-color: #cf1800;
 		border: 1px solid #850f00;
+		border-radius: 10px 170px 10px 10px;
 		box-shadow: #940000 0px 0px 5px 1px;
 		color: white;
 		margin: 3vh;
 	}
-}
-
-
-.navbar-username-display {
-	display: flex;
-	color: white;
-	background-color: #08acb8;
-	width: 100%;
-	height: 12vh;
-	margin: auto;
-}
-
-.navbar-username {
-	margin: auto;
-	font-size: 1.8rem;
-	padding: 1vw;
 }
 
 .page {
@@ -118,6 +101,7 @@ a {
 .pokemon-card-id {
 	display: flex;
 }
+
 .pokemon-card-image {
 	background-color: black;
 	border: 20px solid white;
@@ -137,11 +121,13 @@ a {
 }
 
 .pokedex-card-container {
+	background-color: #063e42;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
-	margin-left: 20%;
+	justify-content: space-between;
+	margin-left: 26%;
 	margin-top: 5vh;
+	width: 72%;
 }
 
 .pokemon-card-pokemon {
@@ -168,14 +154,15 @@ a {
 }
 
 .trainer-card-container {
-display: flex;
+	display: flex;
 	background-color: #077981;
 	border-radius: 0px 70px 0px 0px;
 	bottom: 89%;
 	left: 1%;
 	position: fixed;
 	top: 2%;
-	width: 25%;
+	width: 25%; // change to 22.5% during scroll
+	z-index: -1;
 	img {
 		background-color: #d3d3d3;
 		border: 7px solid #021314;
@@ -212,4 +199,5 @@ display: flex;
 		height: 21px;
 		width: 21px;
 	}
+	
 }
