@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
 body {
-	text-align: center;
 	background-color: #063e42;
+	font-family: 'Prompt', sans-serif;
+	text-align: center;
 }
 
 a {
@@ -15,9 +18,9 @@ a {
 
 .dex-pokemon-card {
 	background-color: #cf1800;
-	color: white;
 	border: 1px solid #850f00;
 	box-shadow: #940000 0px 0px 5px 1px;
+	color: white;
 	height: auto;
 	margin: 2vh;
 	max-width: 20vw;
@@ -31,8 +34,8 @@ a {
 
 .homepage-paths {
 	display: flex;
-	justify-content: space-evenly;
 	flex-direction: column;
+	justify-content: space-evenly;
 	margin-left: 20%;
 	:last-child {
 		margin-left: auto;
@@ -52,21 +55,21 @@ a {
 	a {
 		border-radius: 100px;
 		display: inline-block;
+		height: 25vh;
 		padding: 0;
 		position: relative;
-		height: 25vh;
 		width: 40vw;
 		z-index: 1;
 		p {
 			background-color: rgb(22, 22, 22);
 			border-radius: 2px;
-			font-size: 3em;
+			font-size: 2.7em;
 			height: 25.313vh;
 			letter-spacing: 1px;
-			line-height: 12vh;
+			line-height: 11vh;
+			transform: translate(-4.5%, -0.5%);
 			margin-top: 0;
 			width: 29.3vw;
-			transform: translate(-4.5%, -0.5%);
 		}
 	}
 }
@@ -149,19 +152,21 @@ a {
 	font-size: 6.5em;
 	color:rgb(186, 186, 186);
 	margin-left: 20%;
-	margin-top: 5vh;
+	margin-top: 1vh;
 	width: 80%;
 }
 
 .trainer-card-container {
 	display: flex;
 	background-color: #077981;
+	border: 2.5px solid #021e22;
+	border-left: none;
 	border-radius: 0px 70px 0px 0px;
-	bottom: 89%;
+	bottom: 87.5%;
 	left: 1%;
 	position: fixed;
 	top: 2%;
-	width: 25%; // change to 22.5% during scroll
+	width: 24.85%; // change to 22.5% during scroll
 	z-index: -1;
 	img {
 		background-color: #d3d3d3;
@@ -169,6 +174,7 @@ a {
 		border-radius: 0px 0px 30px 5px;
 		height: 63px;
 		padding: 1vh;
+		transform: translate(0, -3.5%);
 		width: 63px;
 	}
 }
@@ -176,7 +182,7 @@ a {
 .trainer-username-display {
 	border-radius: 0px 25px 0px 0px;
 	color:#bababa;
-	max-height: 3.8vh;
+	max-height: 4vh;
 	width: 14vw;
 	text-align: left;
 	overflow: hidden;

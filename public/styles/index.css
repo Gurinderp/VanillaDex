@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
 body {
-  text-align: center;
   background-color: #063e42;
+  font-family: 'Prompt', sans-serif;
+  text-align: center;
 }
 
 a {
@@ -16,10 +18,10 @@ a :focus {
 
 .dex-pokemon-card {
   background-color: #cf1800;
-  color: white;
   border: 1px solid #850f00;
   -webkit-box-shadow: #940000 0px 0px 5px 1px;
           box-shadow: #940000 0px 0px 5px 1px;
+  color: white;
   height: auto;
   margin: 2vh;
   max-width: 20vw;
@@ -36,13 +38,13 @@ a :focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin-left: 20%;
 }
 
@@ -66,9 +68,9 @@ a :focus {
 .homepage-selection a {
   border-radius: 100px;
   display: inline-block;
+  height: 25vh;
   padding: 0;
   position: relative;
-  height: 25vh;
   width: 40vw;
   z-index: 1;
 }
@@ -76,14 +78,14 @@ a :focus {
 .homepage-selection a p {
   background-color: #161616;
   border-radius: 2px;
-  font-size: 3em;
+  font-size: 2.7em;
   height: 25.313vh;
   letter-spacing: 1px;
-  line-height: 12vh;
-  margin-top: 0;
-  width: 29.3vw;
+  line-height: 11vh;
   -webkit-transform: translate(-4.5%, -0.5%);
           transform: translate(-4.5%, -0.5%);
+  margin-top: 0;
+  width: 29.3vw;
 }
 
 .navbar-container {
@@ -182,7 +184,7 @@ a :focus {
   font-size: 6.5em;
   color: #bababa;
   margin-left: 20%;
-  margin-top: 5vh;
+  margin-top: 1vh;
   width: 80%;
 }
 
@@ -191,12 +193,14 @@ a :focus {
   display: -ms-flexbox;
   display: flex;
   background-color: #077981;
+  border: 2.5px solid #021e22;
+  border-left: none;
   border-radius: 0px 70px 0px 0px;
-  bottom: 89%;
+  bottom: 87.5%;
   left: 1%;
   position: fixed;
   top: 2%;
-  width: 25%;
+  width: 24.85%;
   z-index: -1;
 }
 
@@ -206,13 +210,15 @@ a :focus {
   border-radius: 0px 0px 30px 5px;
   height: 63px;
   padding: 1vh;
+  -webkit-transform: translate(0, -3.5%);
+          transform: translate(0, -3.5%);
   width: 63px;
 }
 
 .trainer-username-display {
   border-radius: 0px 25px 0px 0px;
   color: #bababa;
-  max-height: 3.8vh;
+  max-height: 4vh;
   width: 14vw;
   text-align: left;
   overflow: hidden;
