@@ -9,15 +9,27 @@
 		<a href="/" id="nav-home-btn">Home</a>
 		<a href="/pokedex" id="nav-pokedex-btn">Pokedex</a>
 		<a href="/moves" id="nav-moves-btn">Moves list</a>
-		<a href="" id="nav-type-filter">Type Filter</a>
-		<a href="" id="nav-moves-filter">Moves Filter</a>
+		<div href="" id="nav-type-filter" class="hidden filter">
+			<button>+</button>
+			Type Filter
+		</div>
+		<div href="" id="nav-moves-filter" class="hidden filter">
+			<button>+</button>
+			Moves Filter
+		</div>
 	</div>
 
 	<script>
-		if(href == "/pokedex") {
-			let target = document.getElementById("nav-pokedex-btn");
-
-			target.className.add("hidden");
+		switch (window.location.pathname) {
+			case '/pokedex':
+				document.getElementById("nav-pokedex-btn").classList.add("hidden");
+				document.getElementById("nav-type-filter").classList.remove("hidden");
+				break;
+			case '/moves':
+				document.getElementById("nav-moves-btn").classList.add("hidden");
+				document.getElementById("nav-moves-filter").classList.remove("hidden");
+				break;
 		}
+		console.log("window location is: " + window.location.pathname);
 	</script>
 </nav>

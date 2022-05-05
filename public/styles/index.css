@@ -34,6 +34,10 @@ a :focus {
   padding-right: 2%;
 }
 
+.hidden {
+  display: none;
+}
+
 .homepage-paths {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -132,6 +136,17 @@ a :focus {
   -webkit-box-shadow: #940000 0px 0px 5px 1px;
           box-shadow: #940000 0px 0px 5px 1px;
   color: white;
+  margin: 3vh;
+}
+
+.navbar-links .filter {
+  background-color: #dfdede;
+  border: 1px solid #383838;
+  border-radius: 10px 170px 10px 10px;
+  -webkit-box-shadow: #292929 0px 0px 5px 1px;
+          box-shadow: #292929 0px 0px 5px 1px;
+  font-size: 3vh;
+  padding: 3vh;
   margin: 3vh;
 }
 
