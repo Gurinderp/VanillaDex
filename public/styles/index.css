@@ -38,31 +38,47 @@ a :focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-left: 20%;
 }
 
-.homepage-paths :last-child {
-  margin-left: auto;
-  margin-right: 10%;
+.homepage-paths :nth-child(1) {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.homepage-paths :nth-child(2) {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.homepage-paths :nth-child(3) {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+}
+
+.homepage-paths :nth-child(4) {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
 
 .homepage-selection {
   background-color: #b30000;
-  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #b30000), color-stop(86%, black), color-stop(50%, lightgray));
-  background: linear-gradient(90deg, #b30000 10%, black 86%, lightgray 50%);
-  border: 1.5px solid black;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #b60000), color-stop(86%, black), color-stop(50%, #f0f0f0));
+  background: linear-gradient(90deg, #b60000 10%, black 86%, #f0f0f0 50%);
+  border: 4px solid black;
   border-radius: 100px;
+  -webkit-box-shadow: #031d1f 0px 0px 7px 1px;
+          box-shadow: #031d1f 0px 0px 7px 1px;
   height: 25vh;
   margin-top: 11vh;
-  margin-left: 10%;
-  width: 40vw;
+  margin-left: 7%;
+  width: 30vw;
 }
 
 .homepage-selection a {
@@ -71,21 +87,22 @@ a :focus {
   height: 25vh;
   padding: 0;
   position: relative;
-  width: 40vw;
+  width: 30vw;
   z-index: 1;
 }
 
 .homepage-selection a p {
-  background-color: #161616;
+  background-image: url("/images/pkballgrid.jpg");
   border-radius: 2px;
-  font-size: 2.7em;
-  height: 25.313vh;
-  letter-spacing: 1px;
+  font-size: 2.5em;
+  height: 23vh;
+  letter-spacing: 2px;
   line-height: 11vh;
-  -webkit-transform: translate(-4.5%, -0.5%);
-          transform: translate(-4.5%, -0.5%);
+  -webkit-transform: translate(24%, 0%);
+          transform: translate(24%, 0%);
   margin-top: 0;
-  width: 29.3vw;
+  padding: 1vh;
+  width: 19.6vw;
 }
 
 .navbar-container {
