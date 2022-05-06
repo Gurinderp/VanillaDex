@@ -29,10 +29,10 @@
 					</div>
 					<div class="pokemon-card-description">
 						<!--targets Pokemon Primary Type-->
+						<!--targets Pokemon Secondary Type-->
+						<!--Adds Secondary Type if it is not null-->
 						<div class="pokemon-card-type">
 							<p><%= pokemon[i].information.primaryType %></p>
-							<!--targets Pokemon Secondary Type-->
-							<!--Adds Secondary Type if it is not null-->
 							<% if(pokemon[i].information.secondaryType) { %>
 								<p><%= pokemon[i].information.secondaryType %></p>
 								<% } %>
@@ -44,12 +44,11 @@
 				<% } %>
 		</div>
 		<script>	
-			
-			// Ensures Pokemon Dex Number will be 3 digits long
-			function threeDigits() {
+
+// Ensures Pokemon Dex Number will be 3 digits long
+function threeDigits() {
 				// Store pokemon-dex-number in num variable
 				let num = document.getElementsByClassName("pokemon-dex-number")
-				
 				// Loop for numbers below 10
 				for (var i = 0; i < 9; i++){
 					// Parse the content of num into Number
@@ -57,7 +56,7 @@
 					// Set content of Num to corrected value
 					num[i].innerHTML = '00' + numParsed
 				}
-
+				
 				// Loop for numbers above 9 and less than 99
 				for (var i = 9; i < 99; i++){
 					// Parse the content of num into Number
@@ -66,9 +65,128 @@
 					num[i].innerHTML = '0' + numParsed
 				}
 			}
+			
+				let colors = ["#A8A77A", "#EE8130", "#6390F0", "#F7D02C", "#7AC74C", "#96D9D6", "#C22E28", "#A33EA1", "#E2BF65", "#A98FF3", "#F95587", "#A6B91A", "#B6A136", "#735797", "#6F35FC", "#705746", "#B7B7CE"];
+				let pokeTypes = document.getElementsByClassName("pokemon-card-type");
+				
+				pokeTypes[0].firstElementChild.style.backgroundColor = 'green';
 
+				for(let i = 0; i < pokeTypes.length; i++) {
+					let typeName1 = pokeTypes[i].firstElementChild.innerHTML;
+					let typeName2 = pokeTypes[i].lastElementChild.innerHTML;
+
+					switch (typeName1) {
+						case 'Normal':
+							pokeTypes[i].firstElementChild.style.backgroundColor = colors[0];
+							break;
+						case 'Fire':
+							pokeTypes[i].firstElementChild.style.backgroundColor = colors[1];
+							break;
+						case 'Water':
+							pokeTypes[i].firstElementChild.style.backgroundColor = colors[2];
+							break;
+						case 'Electric':
+							pokeTypes[i].firstElementChild.style.backgroundColor = colors[3];
+							break;
+						case 'Grass':
+							pokeTypes[i].firstElementChild.style.backgroundColor = colors[4];
+							break;
+						case 'Ice':
+							pokeTypes[i].firstElementChild.style.backgroundColor = colors[5];
+							break;
+						case 'Fighting':
+							pokeTypes[i].firstElementChild.style.backgroundColor = colors[6];
+							break;
+						case 'Poison':
+							pokeTypes[i].firstElementChild.style.backgroundColor = colors[7];
+							break;
+						case 'Ground':
+							pokeTypes[i].firstElementChild.style.backgroundColor = colors[8];
+							break;
+						case 'Flying':
+							pokeTypes[i].firstElementChild.style.backgroundColor = colors[9];
+							break;
+						case 'Psychic':
+							pokeTypes[i].firstElementChild.style.backgroundColor = colors[10];
+							break;
+						case 'Bug':
+							pokeTypes[i].firstElementChild.style.backgroundColor = colors[11];
+							break;
+						case 'Rock':
+							pokeTypes[i].firstElementChild.style.backgroundColor = colors[12];
+							break;
+						case 'Ghost':
+							pokeTypes[i].firstElementChild.style.backgroundColor = colors[13];
+							break;
+						case 'Dragon':
+							pokeTypes[i].firstElementChild.style.backgroundColor = colors[14];
+							break;
+						case 'Dark':
+							pokeTypes[i].firstElementChild.style.backgroundColor = colors[15];
+							break;
+						case 'Steel':
+							pokeTypes[i].firstElementChild.style.backgroundColor = colors[16];
+							break;
+					}
+					switch (typeName2) {
+						case 'Normal':
+							pokeTypes[i].lastElementChild.style.backgroundColor = colors[0];
+							break;
+						case 'Fire':
+							pokeTypes[i].lastElementChild.style.backgroundColor = colors[1];
+							break;
+						case 'Water':
+							pokeTypes[i].lastElementChild.style.backgroundColor = colors[2];
+							break;
+						case 'Electric':
+							pokeTypes[i].lastElementChild.style.backgroundColor = colors[3];
+							break;
+						case 'Grass':
+							pokeTypes[i].lastElementChild.style.backgroundColor = colors[4];
+							break;
+						case 'Ice':
+							pokeTypes[i].lastElementChild.style.backgroundColor = colors[5];
+							break;
+						case 'Fighting':
+							pokeTypes[i].lastElementChild.style.backgroundColor = colors[6];
+							break;
+						case 'Poison':
+							pokeTypes[i].lastElementChild.style.backgroundColor = colors[7];
+							break;
+						case 'Ground':
+							pokeTypes[i].lastElementChild.style.backgroundColor = colors[8];
+							break;
+						case 'Flying':
+							pokeTypes[i].lastElementChild.style.backgroundColor = colors[9];
+							break;
+						case 'Psychic':
+							pokeTypes[i].lastElementChild.style.backgroundColor = colors[10];
+							break;
+						case 'Bug':
+							pokeTypes[i].lastElementChild.style.backgroundColor = colors[11];
+							break;
+						case 'Rock':
+							pokeTypes[i].lastElementChild.style.backgroundColor = colors[12];
+							break;
+						case 'Ghost':
+							pokeTypes[i].lastElementChild.style.backgroundColor = colors[13];
+							break;
+						case 'Dragon':
+							pokeTypes[i].lastElementChild.style.backgroundColor = colors[14];
+							break;
+						case 'Dark':
+							pokeTypes[i].lastElementChild.style.backgroundColor = colors[15];
+							break;
+						case 'Steel':
+							pokeTypes[i].lastElementChild.style.backgroundColor = colors[16];
+							break;
+					}
+				}
+			
+			
 			// Invoke function to make corrections
 			threeDigits();
+			filterTypeRecolor();
 		</script>
 	</body>
 </html>
