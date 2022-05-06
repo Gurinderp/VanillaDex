@@ -5,6 +5,22 @@ body {
   text-align: center;
 }
 
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #cf1800;
+  border: 6.5px solid transparent;
+  background-clip: content-box;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6b0d01;
+  border: 1px solid #cf1800;
+  border-radius: 10px;
+}
+
 a {
   color: #00ff11;
   font-size: 3vh;

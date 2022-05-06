@@ -4,6 +4,22 @@ body {
 	background-color: #063e42;
 	font-family: 'Prompt', sans-serif;
 	text-align: center;
+
+	&::-webkit-scrollbar {
+		width: 15px;
+	}
+	
+	&::-webkit-scrollbar-track {
+		background: #cf1800;
+		border: 6.5px solid transparent;
+		background-clip: content-box;
+	}
+	
+	&::-webkit-scrollbar-thumb {
+		background: #6b0d01;
+		border: 1px solid #cf1800;
+		border-radius: 10px;
+	}
 }
 
 a {
