@@ -162,14 +162,19 @@ a :focus {
   -webkit-box-shadow: #940000 0px 0px 5px 1px;
           box-shadow: #940000 0px 0px 5px 1px;
   font-size: 3vh;
-  padding: 3vh;
+  padding: 3vh 2vw 3vh 0;
   margin: 3vh;
 }
 
 .navbar-links .filter button {
   background-color: transparent;
   border: none;
+  font-size: 1.4em;
   text-decoration: none;
+  padding: 0.5vh 1vw;
+  margin-left: 1vw;
+  -webkit-transform: translate(15%);
+          transform: translate(15%);
 }
 
 .page {
@@ -209,15 +214,19 @@ a :focus {
           justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-transform: translate(7.5%);
+          transform: translate(7.5%);
+  margin-top: 3%;
 }
 
 .type-selection a {
   font-size: 0.63em;
   background-color: grey;
   border: none;
-  border-radius: 0px;
+  border-radius: 6px;
   padding: 0.2vh 0.4vw;
   margin: 1%;
+  width: 3.3vw;
 }
 
 .primary {

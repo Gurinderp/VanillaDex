@@ -1,9 +1,3 @@
-<!--Sidebar-->
-<!--Yellow arrow opens and closes it-->
-<!--
-	<a href="" id="nav-gen-filter">Generation Filter</a>
--->
-
 <nav class="navbar-container">
 	<div class="navbar-links">
 		<a href="/" id="nav-home-btn">Home</a>
@@ -33,7 +27,7 @@
 			</div>
 		</div>
 		<div href="" id="nav-moves-filter" class="hidden filter">
-			<button onclick="moveToggle()" class="moves-filter-btn">+</button>
+			<button onclick="moveToggle()" class="moves-filter-btn" id="moves-filter">+</button>
 			Moves Filter
 			<div class="moves-filters type-selection hidden" id="move-filter-selections">
 				<a class="filter-btn" href="/moves/type/Normal">normal</a>
@@ -58,36 +52,46 @@
 	</div>
 
 	<script>
-		switch (window.location.pathname) {
-			case '/pokedex':
-				document.getElementById("nav-pokedex-btn").classList.add("hidden");
-				document.getElementById("nav-type-filter").classList.remove("hidden");
-				break;
-			case '/moves':
-				document.getElementById("nav-moves-btn").classList.add("hidden");
-				document.getElementById("nav-moves-filter").classList.remove("hidden");
-				break;
+		if (window.location.pathname.startsWith("/pokedex")) {
+			document.getElementById("nav-pokedex-btn").classList.add("hidden");
+			document.getElementById("nav-type-filter").classList.remove("hidden");
+		}
+		else if (window.location.pathname.startsWith("/moves")) {
+			document.getElementById("nav-moves-btn").classList.add("hidden");
+			document.getElementById("nav-moves-filter").classList.remove("hidden");
+		}
+		else {
+			document.getElementById("nav-moves-btn").classList.remove("hidden");
+			document.getElementById("nav-pokedex-btn").classList.remove("hidden");
+			document.getElementById("nav-moves-filter").classList.add("hidden");
+			document.getElementById("nav-type-filter").classList.add("hidden");
 		}
 
 
 		function pokeToggle() {
 			let pokeFilters = document.getElementsByClassName("pokemon-filters");
+			let pokeFiltersBtn = document.getElementById("pokemon-filters");
 			console.log(pokeFilters[0])
 			if (pokeFilters[0].classList.contains("hidden")) {
 				pokeFilters[0].classList.remove("hidden");
+				pokeFiltersBtn.innerHTML = "-";
 			}
 			else {
 				pokeFilters[0].classList.add("hidden");
+				pokeFiltersBtn.innerHTML = "+";
 			}
 		}
-
+		
 		function moveToggle() {
 			let moveFilters = document.getElementsByClassName("moves-filters");
+			let moveFiltersBtn = document.getElementById("moves-filter");
 			if (moveFilters[0].classList.contains("hidden")) {
 				moveFilters[0].classList.remove("hidden");
+				moveFiltersBtn.innerHTML = "-";
 			}
 			else {
 				moveFilters[0].classList.add("hidden");
+				moveFiltersBtn.innerHTML = "+";
 			}
 		}
 

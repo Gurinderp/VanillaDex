@@ -130,12 +130,16 @@ a {
 		border-radius: 10px 10px 10px 10px;
 		box-shadow: #940000 0px 0px 5px 1px;
 		font-size: 3vh;
-		padding: 3vh;
+		padding: 3vh 2vw 3vh 0;
 		margin: 3vh;
 		button {
 			background-color: transparent;
 			border: none;
+			font-size: 1.4em;
 			text-decoration: none;
+			padding: 0.5vh 1vw;
+			margin-left: 1vw;
+			transform: translate(15%);
 		}
 	}
 }
@@ -167,13 +171,16 @@ a {
 	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
+	transform: translate(7.5%);
+	margin-top: 3%;
 	a {
 		font-size: 0.63em;
 		background-color: grey;
 		border: none;
-		border-radius: 0px;
+		border-radius: 6px;
 		padding: 0.2vh 0.4vw;
 		margin: 1%;
+		width: 3.3vw;
 	}
 }
 
