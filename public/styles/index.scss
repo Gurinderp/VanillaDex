@@ -109,13 +109,18 @@ a {
 		margin: 3vh;
 	}
 	.filter {
-		background-color: #dfdede;
-		border: 1px solid #383838;
-		border-radius: 10px 170px 10px 10px;
-		box-shadow: #292929 0px 0px 5px 1px;
+		background-color: #cf1800;
+		border: 1px solid #850f00;
+		border-radius: 10px 10px 10px 10px;
+		box-shadow: #940000 0px 0px 5px 1px;
 		font-size: 3vh;
 		padding: 3vh;
 		margin: 3vh;
+		button {
+			background-color: transparent;
+			border: none;
+			text-decoration: none;
+		}
 	}
 }
 
@@ -139,6 +144,21 @@ a {
 	width: 40%;
 	margin: auto;
 	justify-content: space-around;
+}
+
+.type-selection {
+	height: auto;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	a {
+		font-size: 0.63em;
+		background-color: grey;
+		border: none;
+		border-radius: 0px;
+		padding: 0.2vh 0.4vw;
+		margin: 1%;
+	}
 }
 
 .primary {
@@ -228,4 +248,9 @@ a {
 		width: 21px;
 	}
 	
+}
+
+
+.hidden {
+	display: none;
 }

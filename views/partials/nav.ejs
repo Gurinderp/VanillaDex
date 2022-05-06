@@ -10,12 +10,50 @@
 		<a href="/pokedex" id="nav-pokedex-btn">Pokedex</a>
 		<a href="/moves" id="nav-moves-btn">Moves list</a>
 		<div href="" id="nav-type-filter" class="hidden filter">
-			<button>+</button>
+			<button onclick="pokeToggle()" class="pokemon-filter-btn" id="pokemon-filters">+</button>
 			Type Filter
+			<div class="pokemon-filters type-selection hidden" id="pokemon-filter-selections">
+				<a class="filter-btn" href="/pokedex/primary/Normal">normal</a>
+				<a class="filter-btn" href="/pokedex/primary/Fire">fire</a>
+				<a class="filter-btn" href="/pokedex/primary/Water">water</a>
+				<a class="filter-btn" href="/pokedex/primary/Electric">electric</a>
+				<a class="filter-btn" href="/pokedex/primary/Grass">grass</a>
+				<a class="filter-btn" href="/pokedex/primary/Ice">ice</a>
+				<a class="filter-btn" href="/pokedex/primary/Fighting">fighting</a>
+				<a class="filter-btn" href="/pokedex/primary/Poison">poison</a>
+				<a class="filter-btn" href="/pokedex/primary/Ground">ground</a>
+				<a class="filter-btn" href="/pokedex/primary/Flying">flying</a>
+				<a class="filter-btn" href="/pokedex/primary/Psychic">psychic</a>
+				<a class="filter-btn" href="/pokedex/primary/Bug">bug</a>
+				<a class="filter-btn" href="/pokedex/primary/Rock">rock</a>
+				<a class="filter-btn" href="/pokedex/primary/Ghost">ghost</a>
+				<a class="filter-btn" href="/pokedex/primary/Dragon">dragon</a>
+				<a class="filter-btn" href="/pokedex/primary/Dark">dark</a>
+				<a class="filter-btn" href="/pokedex/primary/Steel">steel</a>
+			</div>
 		</div>
 		<div href="" id="nav-moves-filter" class="hidden filter">
-			<button>+</button>
+			<button onclick="moveToggle()" class="moves-filter-btn">+</button>
 			Moves Filter
+			<div class="moves-filters type-selection hidden" id="move-filter-selections">
+				<a class="filter-btn" href="/moves/type/Normal">normal</a>
+				<a class="filter-btn" href="/moves/type/Fire">fire</a>
+				<a class="filter-btn" href="/moves/type/Water">water</a>
+				<a class="filter-btn" href="/moves/type/Electric">electric</a>
+				<a class="filter-btn" href="/moves/type/Grass">grass</a>
+				<a class="filter-btn" href="/moves/type/Ice">ice</a>
+				<a class="filter-btn" href="/moves/type/Fighting">fighting</a>
+				<a class="filter-btn" href="/moves/type/Poison">poison</a>
+				<a class="filter-btn" href="/moves/type/Ground">ground</a>
+				<a class="filter-btn" href="/moves/type/Flying">flying</a>
+				<a class="filter-btn" href="/moves/type/Psychic">psychic</a>
+				<a class="filter-btn" href="/moves/type/Bug">bug</a>
+				<a class="filter-btn" href="/moves/type/Rock">rock</a>
+				<a class="filter-btn" href="/moves/type/Ghost">ghost</a>
+				<a class="filter-btn" href="/moves/type/Dragon">dragon</a>
+				<a class="filter-btn" href="/moves/type/Dark">dark</a>
+				<a class="filter-btn" href="/moves/type/Steel">steel</a>
+			</div>
 		</div>
 	</div>
 
@@ -30,6 +68,40 @@
 				document.getElementById("nav-moves-filter").classList.remove("hidden");
 				break;
 		}
-		console.log("window location is: " + window.location.pathname);
+
+
+		function pokeToggle() {
+			let pokeFilters = document.getElementsByClassName("pokemon-filters");
+			console.log(pokeFilters[0])
+			if (pokeFilters[0].classList.contains("hidden")) {
+				pokeFilters[0].classList.remove("hidden");
+			}
+			else {
+				pokeFilters[0].classList.add("hidden");
+			}
+		}
+
+		function moveToggle() {
+			let moveFilters = document.getElementsByClassName("moves-filters");
+			if (moveFilters[0].classList.contains("hidden")) {
+				moveFilters[0].classList.remove("hidden");
+			}
+			else {
+				moveFilters[0].classList.add("hidden");
+			}
+		}
+
+		function filterBackgroundcolor() {
+			let colors = ["#A8A77A", "#EE8130", "#6390F0", "#F7D02C", "#7AC74C", "#96D9D6", "#C22E28", "#A33EA1", "#E2BF65", "#A98FF3", "#F95587", "#A6B91A", "#B6A136", "#735797", "#6F35FC", "#705746", "#B7B7CE"];
+
+			let pokeTypes = document.getElementsByClassName("filter-btn");
+
+			for(let i = 0; i < colors.length; i++) {
+				pokeTypes[i].style.backgroundColor = colors[i];
+				pokeTypes[i + 17].style.backgroundColor = colors[i];
+			}
+		}
+
+		filterBackgroundcolor();
 	</script>
 </nav>

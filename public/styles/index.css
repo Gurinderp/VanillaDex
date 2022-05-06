@@ -140,14 +140,20 @@ a :focus {
 }
 
 .navbar-links .filter {
-  background-color: #dfdede;
-  border: 1px solid #383838;
-  border-radius: 10px 170px 10px 10px;
-  -webkit-box-shadow: #292929 0px 0px 5px 1px;
-          box-shadow: #292929 0px 0px 5px 1px;
+  background-color: #cf1800;
+  border: 1px solid #850f00;
+  border-radius: 10px 10px 10px 10px;
+  -webkit-box-shadow: #940000 0px 0px 5px 1px;
+          box-shadow: #940000 0px 0px 5px 1px;
   font-size: 3vh;
   padding: 3vh;
   margin: 3vh;
+}
+
+.navbar-links .filter button {
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
 }
 
 .page {
@@ -175,6 +181,27 @@ a :focus {
   margin: auto;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.type-selection {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.type-selection a {
+  font-size: 0.63em;
+  background-color: grey;
+  border: none;
+  border-radius: 0px;
+  padding: 0.2vh 0.4vw;
+  margin: 1%;
 }
 
 .primary {
@@ -279,5 +306,9 @@ a :focus {
   padding: 2px;
   height: 21px;
   width: 21px;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=index.css.map */
