@@ -32,6 +32,22 @@ a {
 	}
 }
 
+.daily {
+	background-color: pink;
+	border: 2px solid green;
+	height: auto;
+	width: 20.5vw;
+	margin-left: 13.5%;
+}
+
+.daily-facts {
+	background-color: orange;
+	width: 80%;
+	:nth-child(2) {
+		margin-left: 19.5%;
+	}
+}
+
 .dex-pokemon-card {
 	background-color: #cf1800;
 	border: 1px solid #850f00;
@@ -52,22 +68,11 @@ a {
 	display: none;
 }
 
-.homepage-paths {
+.homepage-paths, .daily-facts {
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: row;
 	margin-left: 20%;
-	:nth-child(1) {
-		order: 1;
-	}
-	:nth-child(2) {
-		order: 2;
-	}
-	:nth-child(3) {
-		order: 4;
-	}
-	:nth-child(4) {
-		order: 3;
-	}
 }
 
 .homepage-selection {

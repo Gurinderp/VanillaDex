@@ -91,8 +91,8 @@ app.get("/pokedex/:id", function (req, res) {
 	);
 });
 
-// GET request for pokedex page
-app.get("/pokedex/api", function (req, res) {
+// GET request for pokedex api page
+app.get("/pokedex/api", async function (req, res) {
 	Pokemon.find(function (err, pokemon) {
 		if (err) {
 			console.log(err);

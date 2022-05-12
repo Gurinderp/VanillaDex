@@ -28,21 +28,23 @@
 					</p>
 				</a>
 			</div>
-			<div class="homepage-selection">
+		</div>
+		<div class="daily-facts">
+			<div class="daily">
 				<!--Homepage link that routes to /pokedex and opens the Pokedex-->
-				<a href="/pokedex">
+				<div href="/pokedex">
 					<p>
-						Pokedex
-					</p>
-				</a>
+						Pokemon of the Day
+					</p>					
+				</div>
 			</div>
-			<div class="homepage-selection">
+			<div class="daily">
 				<!--Homepage link that routes to /moves and opens the Moves List-->
-				<a href="/moves">
+				<div href="/moves">
 					<p>
-						Moves
+						Move of the Day
 					</p>
-				</a>
+				</div>
 			</div>
 		</div>
 		<script>
@@ -59,12 +61,6 @@
 				});
 
 			console.log("hello world");
-
-			function consoleLogData(data) {
-				for (var i = 0; i < data.length; i++) {
-					console.log(data[i]);
-				}
-			}
 		</script>
 	</body>
 </html>
