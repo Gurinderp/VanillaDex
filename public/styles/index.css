@@ -122,6 +122,10 @@ a :focus {
   width: 19.6vw;
 }
 
+.moves-name {
+  font-size: 1em;
+}
+
 .navbar-container {
   bottom: 6%;
   left: 1%;

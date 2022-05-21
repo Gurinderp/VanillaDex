@@ -10,6 +10,26 @@
 		<!--Including Navigation partial-->
 		<%- include('./partials/nav') %>
 		<!--Moves List Title-->
-		<div class="moves-title title">Moves List</div>
+		<div class="moves-title title">
+			<% for(var i=0; i<moves.length;i++) { %>
+				<p class="moves-name"><%= moves[i].name %></p>
+				<p class="moves-number"><%= moves[i].moveNumber %></p>
+				<div class="moves-card-image">
+					<img class="moves-image" src="/images/Bulbasaur.png" alt="poke-image">
+				</div>
+				<div class="moves-card-description">
+					<div class="moves-card-type">
+						<p><%= moves[i].category %></p>
+						<p><%= moves[i].type %></p>
+					</div>
+					<div class="moves-card-descript-text">
+						<p><%= moves[i].description %></p>
+					</div>
+				</div>
+			<% } %>
+		</div>
+		
 	</body>
 </html>
+
+<!--power, powerpoint, accuracy - these will go on the movesView page-->

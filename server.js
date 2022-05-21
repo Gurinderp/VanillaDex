@@ -62,6 +62,17 @@ app.get("/pokedex", async function (req, res) {
 	});
 });
 
+// GET request for moves page
+app.get("/moves", async function (req, res) {
+	Moves.find(function (err, moves) {
+		if (err) {
+			console.log(err);
+		} else {
+			res.render("moves", { moves: moves });
+		}
+	});
+});
+
 // GET request for pokedex page -- Filter for Primary Type
 app.get("/pokedex/primary/:id", function (req, res) {
 	Pokemon.find(
