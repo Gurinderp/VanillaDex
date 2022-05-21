@@ -20,7 +20,7 @@ const movesSchema = new mongoose.Schema({
 	power: {
 		type: Number,
 		required: [true, "Move Power is required."],
-		min: [1, "Power cannot be lower than 1."],
+		min: [0, "Power cannot be lower than 0."],
 		max: [200, "Invalid entry: Power too high."],
 	},
 	powerpoint: {
