@@ -5,9 +5,17 @@ const movesSchema = new mongoose.Schema({
 		type: String,
 		required: [true, "Move Name is required."],
 	},
+	moveNumber: {
+		type: String,
+		required: [true, "TM/HM number is required."]
+	},
 	type: {
 		type: String,
 		required: [true, "Move Type is required."],
+	},
+	category: {
+		type: String,
+		required: [true, "Category Type is required."],
 	},
 	power: {
 		type: Number,

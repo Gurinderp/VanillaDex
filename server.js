@@ -6,6 +6,7 @@ const ejs = require("ejs");
 
 // Models
 const Pokemon = require("./models/Pokemon");
+const Moves = require("./models/Moves");
 
 // Dotenv configuration method
 dotenv.config();
@@ -159,6 +160,27 @@ app.post("/pokedex/register/poke_submission", async function (req, res) {
 	try {
 		const newPokemon = await poke.save();
 		res.send(newPokemon);
+	} catch (err) {
+		res.send(req.body);
+		console.log(err);
+	}
+});
+
+// POST request to register moves from front end
+app.post("/moves/register/moves_submission", async function (req, res) {
+	const move = new Moves({
+		name: req.body.name,
+		moveNumber: req.body.moveNumber,
+		type: req.body.type,
+		category: req.body.category,
+		power: req.body.power,
+		powerpoint: req.body.powerpoint, 
+		accuracy: req.body.accuracy,
+		description: req.body.description, 
+	});
+	try {
+		const newMove = await move.save();
+		res.send(newMove);
 	} catch (err) {
 		res.send(req.body);
 		console.log(err);
