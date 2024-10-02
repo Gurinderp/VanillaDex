@@ -19,9 +19,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Set paths for use
-app.use(express.static("public"));
-app.use("/css", express.static(__dirname + "/public/styles"));
-app.use("/images", express.static(__dirname + "/public/assets"));
+app.use(express.static("Public"));
+app.use("/css", express.static(__dirname + "/Public/styles"));
+app.use("/images", express.static(__dirname + "/Public/assets"));
 
 // Telling express to use the ejs engine
 app.set("view engine", "ejs");
@@ -49,14 +49,14 @@ app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
 
 // GET request for home page -- index.ejs
 app.get("/", function (req, res) {
-	res.render("index");
+	res.render("./Pages/index");
 });
 
 // GET request for pokedex page
 app.get("/pokedex", function (req, res) {
 	Pokemon.find(async function (err, pokemon) {
 		try {
-			await res.render("pokedex", { pokemon: pokemon });
+			await res.render("./Pages/pokedex", { pokemon: pokemon });
 			console.log(pokemon);
 		}
 		catch (err) {
@@ -72,7 +72,7 @@ app.get("/moves", function (req, res) {
 			console.log(err);
 		} else {
 			console.log(moves);
-			res.render("moves", { moves: moves });
+			res.render("./Pages/moves", { moves: moves });
 		}
 	});
 });
@@ -86,7 +86,7 @@ app.get("/pokedex/primary/:id", function (req, res) {
 				console.log(err);
 			} else {
 				console.log(pokemon);
-				res.render("pokedex", { pokemon: pokemon });
+				res.render("./Pages/pokedex", { pokemon: pokemon });
 			}
 		}
 	);
@@ -101,7 +101,7 @@ app.get("/pokedex/:id", function (req, res) {
 				console.log(err);
 			} else {
 				console.log(pokemon);
-				res.render("pokemonView", { pokemon: pokemon });
+				res.render("./Pages/pokemonView", { pokemon: pokemon });
 			}
 		}
 	);
@@ -120,17 +120,17 @@ app.get("/pokedex/api", async function (req, res) {
 
 // GET request for moves page
 app.get("/moves", function (req, res) {
-	res.render("moves");
+	res.render("./Pages/moves");
 });
 
 // GET request for register page
 app.get("/registration", function (req, res) {
-	res.render("registration");
+	res.render("./Pages/registration");
 });
 
 // GET request for login page
 app.get("/login", function (req, res) {
-	res.render("login");
+	res.render("./Pages/login");
 });
 
 //
