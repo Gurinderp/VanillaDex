@@ -8,7 +8,7 @@ const pokemonSchema = new mongoose.Schema({
 		},
 		dexNumber: {
 			type: Number,
-			required: [true, "Pokemon Dex number is required."],
+			required: true,
 			min: [1, "Dex Number must be above Zero."],
 			max: [151, "First generation only goes up to 151."],
 		},

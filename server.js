@@ -37,6 +37,7 @@ mongoose.connect(
 	async function (req, res) {
 		try {
 			await console.log("Connected to Database");
+			console.log(mongoose.connection.readyState);
 		} catch (err) {
 			throw err;
 		}
@@ -52,22 +53,25 @@ app.get("/", function (req, res) {
 });
 
 // GET request for pokedex page
-app.get("/pokedex", async function (req, res) {
-	Pokemon.find(function (err, pokemon) {
-		if (err) {
+app.get("/pokedex", function (req, res) {
+	Pokemon.find(async function (err, pokemon) {
+		try {
+			await res.render("pokedex", { pokemon: pokemon });
+			console.log(pokemon);
+		}
+		catch (err) {
 			console.log(err);
-		} else {
-			res.render("pokedex", { pokemon: pokemon });
 		}
 	});
 });
 
 // GET request for moves page
-app.get("/moves", async function (req, res) {
-	Moves.find(function (err, moves) {
+app.get("/moves", function (req, res) {
+	Moves.find({ dexNumber: { $gte: 0}}, function (err, moves) {
 		if (err) {
 			console.log(err);
 		} else {
+			console.log(moves);
 			res.render("moves", { moves: moves });
 		}
 	});
